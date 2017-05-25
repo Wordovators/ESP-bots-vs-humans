@@ -1,0 +1,38 @@
+<div class="row top-buffer">
+	<div class="col-md-offset-1 col-md-10">
+		<h2>{{instructionsCtrl.title}}</h2>
+	</div>
+</div>
+<div class="row top-buffer" ng-repeat="currentInstructions in instructionsCtrl.currentInstructions">
+	<div class="col-md-offset-1 col-md-10">
+		<div>
+			<p ng-bind-html="currentInstructions.paragraph"></p>
+		</div>
+		<div>
+			<img ng-src="experiments/{{instructionsCtrl.expId}}/instructions/{{currentInstructions.image}}" alt="currentInstructions.image" class="img-responsive"
+			ng-show="currentInstructions.image"/>
+		</div>
+	</div>
+</div>
+<div class="row text-center top-buffer vcenter" ng-cloak>
+	<div class="col-xs-4">
+		<button type="button" class="btn btn-primary btn-lg"
+		ng-click="instructionsCtrl.prevClicked()"
+		ng-disabled="instructionsCtrl.instructionsIndex==0 ? true : false">
+			PREV
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</button>
+	</div>
+	<div class="col-xs-4">
+		<p>
+			{{instructionsCtrl.instructionsIndex+1}}/{{instructionsCtrl.instructions.length}}
+		</p>
+	</div>
+	<div class="col-xs-4">
+    <button type="button" class="btn btn-primary btn-lg"
+		ng-click="instructionsCtrl.nextClicked()">
+      NEXT
+			<span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+  </div>
+</div>

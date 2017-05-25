@@ -1,0 +1,18 @@
+<div class="row" ng-show="keyboardResponseCtrl.item.prompt==null || keyboardResponseCtrl.item.prompt=='' ? false : true">
+  <div class="col-xs-12" ng-class="{'text-center': keyboardResponseCtrl.item.textalign!='left'}">
+		<h3 ng-bind-html='keyboardResponseCtrl.item.prompt'></h3>
+  </div>
+</div>
+
+<div class="row" ng-show="keyboardResponseCtrl.item.image==null || keyboardResponseCtrl.item.image=='' ? false : true">
+  <div class="col-xs-12">
+		<img ng-src="{{keyboardResponseCtrl.item.image}}" class="center-block"></img>
+  </div>
+</div>
+
+
+<div class="row top-buffer">
+  <div class="col-xs-12 text-center" ng-show="keyboardResponseCtrl.item.info==null || keyboardResponseCtrl.item.info=='' ? false : true">
+		<p>{{keyboardResponseCtrl.item.info}}</p>
+  </div>
+</div>

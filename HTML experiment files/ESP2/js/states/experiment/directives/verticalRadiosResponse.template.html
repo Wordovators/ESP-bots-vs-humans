@@ -1,0 +1,30 @@
+<div class="row" ng-show="verticalRadiosResponseCtrl.item.prompt==null || verticalRadiosResponseCtrl.item.prompt=='' ? false : true">
+  <div class="col-xs-12" ng-class="{'text-center': verticalRadiosResponseCtrl.item.textalign!='left'}">
+		<h3 ng-bind-html='verticalRadiosResponseCtrl.item.prompt'></h3>
+  </div>
+</div>
+
+<div class="row" ng-show="verticalRadiosResponseCtrl.item.image==null || verticalRadiosResponseCtrl.item.image=='' ? false : true">
+  <div class="col-xs-12">
+		<img ng-src="{{verticalRadiosResponseCtrl.item.image}}" class="center-block"></img>
+  </div>
+</div>
+
+
+<div class="row top-buffer">
+  <div class="col-xs-12 text-center" ng-show="verticalRadiosResponseCtrl.item.info==null || verticalRadiosResponseCtrl.item.info=='' ? false : true">
+		<p>{{verticalRadiosResponseCtrl.item.info}}</p>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-xs-offset-5 col-xs-6">
+		<div class="radio" ng-repeat="opt in verticalRadiosResponseCtrl.item.options">
+			<label>
+				<input type="radio" ng-value="opt" name="verticalRadioGroup"
+				ng-model="verticalRadiosResponseCtrl.response"
+        ng-change="verticalRadiosResponseCtrl.radioChanged()"
+				ng-disabled="verticalRadiosResponseCtrl.responseInputsDisabled">{{opt}}</label>
+		</div>
+	</div>
+</div>

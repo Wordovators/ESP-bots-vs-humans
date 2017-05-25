@@ -1,0 +1,37 @@
+<div class="row" ng-show="textInputResponseCtrl.item.prompt==null || textInputResponseCtrl.item.prompt=='' ? false : true">
+  <div class="col-xs-12 text-center">
+		<h3 ng-bind-html='textInputResponseCtrl.item.prompt'></h3>
+  </div>
+</div>
+
+<div class="row" ng-show="textInputResponseCtrl.item.image==null || textInputResponseCtrl.item.image=='' ? false : true">
+  <div class="col-xs-12">
+		<img ng-src="{{textInputResponseCtrl.item.image}}" class="center-block"></img>
+  </div>
+</div>
+
+
+<div class="row top-buffer">
+  <div class="col-xs-12 text-center" ng-show="textInputResponseCtrl.item.info==null || textInputResponseCtrl.item.info=='' ? false : true">
+		<p>{{textInputResponseCtrl.item.info}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+		<input type="text" id="textResponseInput" class="form-control" placeholder="enter transcription here"
+		ng-model="textInputResponseCtrl.response"
+		ng-disabled="textInputResponseCtrl.responseInputsDisabled"
+		ng-keyup="textInputResponseCtrl.onKeyUp($event)"></input>
+  </div>
+</div>
+
+<div class="row" ng-show="textInputResponseCtrl.showError">
+  <div class="col-xs-12">
+    <div class="alert alert-danger">
+      <p>
+        Please type in your response here
+      </p>
+    </div>
+  </div>
+</div>

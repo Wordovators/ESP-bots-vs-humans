@@ -1,0 +1,120 @@
+<div class="row top-buffer text-center">
+	<div class="col-xs-6 pull-left" ng-if="experimentCtrl.nextItemService.frame.phase=='esp' && experimentCtrl.nextItemService.parameters.showPoints.value==true">
+	  Your score: {{experimentCtrl.score}}
+	</div>
+	<div class="col-xs-6 pull-right">
+	  {{experimentCtrl.nextItemService.progress}}/{{experimentCtrl.nextItemService.totalItems}}
+	</div>
+</div>
+
+<div class="row">
+	<!-- instructions -->
+	<div class="col-xs-offset-3 col-xs-6" ng-if="experimentCtrl.nextItemService.frame.phase=='instructions'">
+		<p ng-bind-html="experimentCtrl.nextItemService.frame.sentenceFrame"></p>
+		<button type="button" class="btn btn-default pull-right" ng-click="experimentCtrl.nextClicked()">
+			NEXT
+			<span class="glyphicon glyphicon-play"></span>
+		</button>
+	</div>
+
+	<!-- test phase -->
+	<div class="col-xs-offset-3 col-xs-6" ng-if="experimentCtrl.nextItemService.frame.phase=='test' || experimentCtrl.nextItemService.frame.phase=='postTest'">
+		<h3 class="text-center">
+			{{experimentCtrl.nextItemService.frame.sentenceFrame}}
+		</h3>
+
+		<button type="button" class="btn btn-primary btn-block"
+		ng-repeat="selection in experimentCtrl.nextItemService.frame.selections"
+		ng-click="experimentCtrl.responseButtonClicked(selection)">
+			{{selection}}
+		</button>
+	</div>
+
+	<!-- esp pause -->
+	<div class="col-xs-offset-3 col-xs-6 text-center" ng-if="experimentCtrl.nextItemService.frame.phase=='espPause'">
+		<h3>
+			{{experimentCtrl.nextItemService.parameters.espPause.sentenceFrame}}
+		</h3>
+		<div class="spinner-loader top-buffer"></div>
+	</div>
+
+	<!-- esp phase (select) -->
+	<div class="col-xs-offset-3 col-xs-6" ng-if="experimentCtrl.nextItemService.frame.phase=='esp'">
+		<h3 class="text-center">
+			{{experimentCtrl.nextItemService.frame.sentenceFrame}}
+		</h3>
+
+		<div class="row" ng-if="experimentCtrl.espState != 'feedback'">
+			<div class="col-xs-6 text-center" ng-if="experimentCtrl.espState == 'select'">
+				<button type="button" class="btn btn-primary btn-block"
+				ng-repeat="selection in experimentCtrl.nextItemService.frame.selections"
+				ng-click="experimentCtrl.responseButtonClicked(selection)">
+					{{selection}}
+				</button>
+			</div>
+			<div class="col-xs-6 text-center" ng-if="experimentCtrl.espState == 'show'">
+				<p>
+					Player 1 (you)
+				</p>
+				<h3>
+					{{experimentCtrl.response}}
+				</h3>
+			</div>
+			<div class="col-xs-6 text-center verticalLine" ng-if="experimentCtrl.robotStatus=='thinking'">
+				<p>
+					Player 2 thinking...
+				</p>
+				<div class="dots-loader top-buffer"></div>
+			</div>
+			<div class="col-xs-6 text-center verticalLine" ng-if="experimentCtrl.robotStatus=='ready'">
+				<p>
+					Player 2 ready
+				</p>
+			</div>
+		</div>
+
+		<div class="row" ng-if="experimentCtrl.espState == 'feedback'">
+			<div class="row text-center">
+				<h4 ng-class="experimentCtrl.feedbackTextColor">
+					{{experimentCtrl.feedbackText}}
+				</h4>
+			</div>
+
+			<div class="row top-buffer">
+				<div class="col-xs-5 text-center">
+					Player 1 (you)
+					<h3>
+						{{experimentCtrl.response}}
+					</h3>
+				</div>
+				<div class="col-xs-2 text-center">
+					<h3>
+				  	{{experimentCtrl.equalSign}}
+					</h3>
+				</div>
+				<div class="col-xs-5 text-center">
+					Player 2 selected
+					<h3>
+				  	{{experimentCtrl.nextItemService.frame.robotSelects}}
+					</h3>
+				</div>
+			</div>
+
+			<div class="row top-buffer">
+				<div class="col-xs-12 text-center">
+					<button type="button" class="btn btn-default" ng-click="experimentCtrl.nextClicked()">
+						NEXT
+						<span class="glyphicon glyphicon-play"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- throbber -->
+	<div class="row" ng-if="experimentCtrl.ready==false">
+		<div class="col-xs-12 text-center top-buffer">
+			<div class="spinner-loader"></div>
+		</div>
+	</div>
+</div>

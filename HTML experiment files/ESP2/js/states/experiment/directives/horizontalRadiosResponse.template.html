@@ -1,0 +1,49 @@
+<div class="row" ng-show="horizontalRadiosResponseCtrl.item.prompt==null || horizontalRadiosResponseCtrl.item.prompt=='' ? false : true">
+  <div class="col-xs-12" ng-class="{'text-center': horizontalRadiosResponseCtrl.item.textalign!='left'}">
+		<h3 ng-bind-html='horizontalRadiosResponseCtrl.item.prompt'></h3>
+  </div>
+</div>
+
+<div class="row" ng-show="horizontalRadiosResponseCtrl.item.image==null || horizontalRadiosResponseCtrl.item.image=='' ? false : true">
+  <div class="col-xs-12">
+		<img ng-src="{{horizontalRadiosResponseCtrl.item.image}}" class="center-block"></img>
+  </div>
+</div>
+
+
+<div class="row top-buffer">
+  <div class="col-xs-12 text-center" ng-show="horizontalRadiosResponseCtrl.item.info==null || horizontalRadiosResponseCtrl.item.info=='' ? false : true">
+		<p>{{horizontalRadiosResponseCtrl.item.info}}</p>
+  </div>
+</div>
+
+<!--
+<div class="row">
+	<div class="col-xs-offset-5 col-xs-6">
+		<div class="radio" ng-repeat="opt in horizontalRadiosResponseCtrl.item.options">
+			<label>
+				<input type="radio" ng-value="opt" name="horizontalRadioGroup"
+				ng-model="horizontalRadiosResponseCtrl.response"
+				ng-disabled="horizontalRadiosResponseCtrl.responseInputsDisabled">{{opt}}</label>
+		</div>
+	</div>
+</div>
+-->
+
+
+<div class="row text-center">
+	<div class="col-xs-12">
+		<label class="radio-inline">
+			{{horizontalRadiosResponseCtrl.item.leftLabel}}
+		</label>
+		<label class="radio-inline" ng-repeat="opt in horizontalRadiosResponseCtrl.options">
+			<input type="radio" name="horizontalRadioGroup" ng-value="opt"
+			ng-model="horizontalRadiosResponseCtrl.response"
+      ng-change="horizontalRadiosResponseCtrl.radioChanged()"
+			ng-disabled="horizontalRadiosResponseCtrl.responseInputsDisabled">{{opt}}</input>
+		</label>
+		<label class="radio-inline">
+			{{horizontalRadiosResponseCtrl.item.rightLabel}}
+		</label>
+	</div>
+</div>

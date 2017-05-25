@@ -1,0 +1,18 @@
+<div class="row" ng-show="noResponseCtrl.item.prompt==null || noResponseCtrl.item.prompt=='' ? false : true">
+  <div class="col-xs-12" ng-class="{'text-center': noResponseCtrl.item.textalign!='left'}">
+		<h3 ng-bind-html="noResponseCtrl.item.prompt"></h3>
+  </div>
+</div>
+
+<div class="row" ng-show="noResponseCtrl.item.image==null || noResponseCtrl.item.image=='' ? false : true">
+  <div class="col-xs-12">
+		<img ng-src="{{noResponseCtrl.item.image}}" class="center-block"></img>
+  </div>
+</div>
+
+
+<div class="row top-buffer">
+  <div class="col-xs-12 text-center" ng-show="noResponseCtrl.item.info==null || noResponseCtrl.item.info=='' ? false : true">
+		<p>{{item.info}}</p>
+  </div>
+</div>

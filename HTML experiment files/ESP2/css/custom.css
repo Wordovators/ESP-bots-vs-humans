@@ -1,0 +1,21 @@
+.top-buffer {
+	margin-top:10px;
+}
+
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
+.verticalLine {
+	border-left: 1px solid black;
+	height: 100px;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}

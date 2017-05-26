@@ -1,0 +1,33 @@
+[
+	{
+		"title":"Instructions",
+		"instructions":[
+			{"paragraph":"Hello, and thank you for your participation."},
+
+			{"paragraph":"In this game, you will be matched with another player, with the goal of trying to guess in advance your co-player's responses."}
+		]
+	},
+	{
+		"title":"Instructions",
+		"instructions":[
+			{"paragraph":"You will see a series of verbs that are not necessarily familiar to you, and you will need to pick a past tense form for each verb."},
+			{"paragraph":"To give an example, the past tense of the verb 'go' is 'went'. The past tense of the verb 'walk' is 'walked'. Many verbs can have multiple past tenses. The past tense of the verb 'seek' might be 'seeked' or 'sought.' One might sound better to you."}
+		]
+	},
+	{
+		"title":"Instructions",
+		"instructions":[
+			{"paragraph":"This game begins with a two-player, interactive guessing round. In this round, you will try to predict which past tense answer your co-player will pick. After you pick an answer, you'll see what your co-player's answer was, and you'll receive game points for correct predictions. <br><br> Afterward, there will be a solo round, where you just need to indicate which of the two past tense forms sounds better to you. <br><br> Finally, we will ask you to provide some short feedback about your impressions of the game."},
+			{"paragraph":"The entire task takes less than 30 minutes."}
+		]
+	},
+	{
+		"title":"Instructions",
+		"instructions":[
+			{"paragraph":"To take this HIT, you have to be a native speaker of English, 18 years or older."},
+			{"paragraph":"We monitor our results to make sure that participants are attentive to the task. If you are inattentive or don't follow directions, you risk being excluded from our future HITs."},
+			{"paragraph":"There are no completion codes required for this HIT. Your data is saved as soon as you complete the whole task."},
+			{"paragraph":"When you are ready to begin, click the NEXT button."}
+		]
+	}
+]

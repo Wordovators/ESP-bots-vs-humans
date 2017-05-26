@@ -1,0 +1,56 @@
+[
+    {
+        "key": "otherPlayersResponsesComment",
+        "type": "input",
+        "templateOptions": {
+            "label": "Optional comment:",
+            "required": false
+        }
+    },
+    {
+        "key": "otherPlayerReasonable",
+        "type": "radio",
+        "templateOptions": {
+            "label": "Did you feel that the other player in this game gave reasonable answers?",
+            "options": [
+                {
+                  "name": "1 - No",
+                  "value": "1"
+                },
+                {
+                  "name": "2",
+                  "value": "2"
+                },
+                {
+                  "name": "3",
+                  "value": "3"
+                },
+                {
+                  "name": "4",
+                  "value": "4"
+                },
+                {
+                  "name": "5 - Yes",
+                  "value": "5"
+                }
+            ],
+            "required": false
+        }
+    },
+    {
+        "key": "otherPlayerReasonableComment",
+        "type": "input",
+        "templateOptions": {
+            "label": "Optional comment:",
+            "required": false
+        }
+    },
+    {
+        "key": "otherPlayerNoticeablePatterns",
+        "type": "input",
+        "templateOptions": {
+            "label": "Did you notice any pattern(s) in the other player's responses? If yes, try to explain in 1-2 sentences.",
+            "required": false
+        }
+    }    
+]

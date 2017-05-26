@@ -1,1 +1,22 @@
-afdasdf
+Some assembly is required for this game. 
+
+Basic information about the Firebase setup is listed in HTML experiment files/Documentation. For instance, it's necessary to link this game to Firebase by specifying the API and URL, as described. The documentation in this folder is currently (May 2017) very general, and refers to other games in the suite rather than ESP specifically.  
+The main experiment folder here is ESP-bots-vs-humans/ESP2, which contains the required js and css folders for the game. 
+
+However, the "experiments" folder is empty. Since under different conditions, we used different introductory instructions for this game, we had to alternate between different versions of the game inside the experiments folder.  Thus copy the appropriate folder from here: 
+
+HTML experiment files/ESP-computer peer
+HTML experiment files/ESP-unspecified peer
+
+...and place it inside here: 
+
+HTML experiment files/ESP2/experiments
+
+In order to use the same URL for different conditions (so as to consider them the same HIT in MTurk), it's necessary to have the internal folder structure be the same. Thus the above folder should be renamed once moved. e.g., in order to match the specifications in experimentInfo.json, in the end you should have a folder renamed as: 
+
+HTML experiment files/ESP2/experiments/ESP
+
+The condition ("bot" or "human") is included as as field in each JSON list, so when you run the experient, this information will be recorded in your data. 
+
+In these JSON files, note the presentation order for the experiment: "instructions2", "esp", "instructions3", "postTest."
+The ESP game paradigm allows for a "pretest" round (labeled "test"), which, when used, occurs before the ESP round. In the JSONs included in this repository, the pretest is omitted. A dummy "test" round is included in the JSON files (since the game currently expects this to be present), but the round is never called. The "instructions1" block would appear as a precursor to the pretest; since the pretest is never called, instructions1 is never called. 

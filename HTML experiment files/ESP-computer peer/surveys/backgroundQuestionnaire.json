@@ -1,0 +1,91 @@
+[
+    {
+        "noFormControl": true,
+        "template": "<h2>Background Questionnaire</h2>"
+    },
+    {
+        "key": "gender",
+        "type": "select",
+        "templateOptions": {
+            "label": "Gender",
+            "options": [
+                {
+                    "name": "Female",
+                    "value": "Female"
+                },
+                {
+                    "name": "Male",
+                    "value": "Male"
+                },
+                {
+                    "name": "Decline to answer",
+                    "value": "Decline to answer"
+                }
+            ],
+            "valueProp": "value",
+            "labelProp": "name",
+            "required": true
+        }
+    },
+    {
+        "key": "yearOfBirth",
+        "type": "input",
+        "templateOptions": {
+            "label": "Year of birth",
+            "placeholder": "e.g. 1990",
+            "pattern": "^\\d{4}$",
+            "required": true
+        }
+    },
+    {
+        "key": "mainLanguage",
+        "type": "input",
+        "templateOptions": {
+            "label": "What is your main language?",
+            "required": true
+        }
+    },
+    {
+        "key": "countryMainLanguage",
+        "type": "input",
+        "templateOptions": {
+            "label": "What country were you living in when you FIRST LEARNED THIS LANGUAGE?",
+            "required": true        }
+    },
+    {
+        "key": "currentCountry",
+        "type": "input",
+        "templateOptions": {
+            "label": "What country do you live in NOW?",
+            "required": true
+        }
+    },
+    {
+        "key": "impairments",
+        "type": "select",
+        "templateOptions": {
+            "label": "Do you have a history of any speech or language impairments that you are aware of?",
+            "options": [
+                {
+                    "name": "Yes",
+                    "value": "Yes"
+                },
+                {
+                    "name": "Yes - corrected",
+                    "value": "Yes - corrected"
+                },
+                {
+                    "name": "No",
+                    "value": "No"
+                },
+                {
+                    "name": "Decline to answer",
+                    "value": "Decline to answer"
+                }
+            ],
+            "valueProp": "value",
+            "labelProp": "name",
+            "required": true
+        }
+    }
+]

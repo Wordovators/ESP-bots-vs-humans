@@ -1,0 +1,49 @@
+[
+  {
+        "key": "otherPlayersResponsesComment",
+        "type": "input",
+        "templateOptions": {
+            "label": "Optional comment:",
+            "required": false
+        }
+    },
+    {
+        "key": "otherPlayerReasonable",
+        "type": "radio",
+        "templateOptions": {
+            "label": "Did you feel that the other player in this game gave reasonable answers?",
+            "options": [
+                {
+                  "name": "1 - No",
+                  "value": "1"
+                },
+                {
+                  "name": "2",
+                  "value": "2"
+                },
+                {
+                  "name": "3",
+                  "value": "3"
+                },
+                {
+                  "name": "4",
+                  "value": "4"
+                },
+            
+{
+        "key": "badItems",
+        "type": "input",
+        "templateOptions": {
+            "label": "Did any items in the game seem really bad to you? If so, which?",
+            "required": false
+        }
+    },
+		{
+        "key": "likedItems",
+        "type": "input",
+        "templateOptions": {
+            "label": "Did you especially like any items in the game? If so, which?",
+            "required": false
+        }
+    }
+]

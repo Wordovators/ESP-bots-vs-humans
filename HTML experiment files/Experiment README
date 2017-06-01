@@ -1,7 +1,7 @@
-Some assembly is required for this game. 
+Some assembly is required for this game (ESP2). 
 
 Basic information about the Firebase setup is listed in HTML experiment files/Documentation. For instance, it's necessary to link this game to Firebase by specifying the API and URL, as described. The documentation in this folder is currently (May 2017) very general, and refers to other games in the suite rather than ESP specifically.  
-The main experiment folder here is ESP-bots-vs-humans/ESP2, which contains the required js and css folders for the game. 
+The main experiment folder here is ESP-bots-vs-humans/ESP2, which contains the required js and css folders for the game. As described in the documentation, set the game's status to "debug" or "live" as needed, in the experimentInfo file. 
 
 However, the "experiments" folder is empty. Since under different conditions, we used different introductory instructions for this game, we had to alternate between different versions of the game inside the experiments folder.  Thus copy the appropriate folder from here: 
 
